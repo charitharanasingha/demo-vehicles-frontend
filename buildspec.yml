@@ -15,7 +15,11 @@ phases:
   build:
     commands:
         - echo Build started 
-        - ng build --configuration development --aot
+        - ng build --configuration production --aot
+  post_build:
+     commands:
+      - aws s3 cp dist s3://${S3_BUCKET} --recursive
+      - echo Build completed on `date`
 artifacts:
     files:
         - '**/*'
