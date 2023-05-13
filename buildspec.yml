@@ -12,10 +12,12 @@ phases:
         - echo Installing source NPM dependencies...
         - npm install --legacy-peer-deps
         - npm install -g @angular/cli
+        - rm package-lock.json
   build:
     commands:
         - echo Build started 
         - ng build
+        - ls -l -lf
   post_build:
      commands:
         - aws s3 rm s3://${S3_BUCKET} --recursive
