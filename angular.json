@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bootstrap-app": {
+    "demo-vehicles-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bootstrap-app:build:production"
+              "browserTarget": "demo-vehicles-frontend:build:production"
             },
             "development": {
-              "browserTarget": "bootstrap-app:build:development"
+              "browserTarget": "demo-vehicles-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bootstrap-app:build"
+            "browserTarget": "demo-vehicles-frontend:build"
           }
         },
         "test": {
