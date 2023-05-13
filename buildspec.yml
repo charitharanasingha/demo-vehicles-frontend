@@ -20,7 +20,7 @@ phases:
         - ls -l -lf
   post_build:
      commands:
-        - aws s3 cp dist s3://demo-vehicles-frontend --recursive
+        - aws s3 cp dist s3://demo-vehicles-frontend --recursive --acl=public-read
         - echo Build completed on `date`
 artifacts:
     files:
