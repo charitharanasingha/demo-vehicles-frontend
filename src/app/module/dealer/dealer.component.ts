@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 interface Dealer {
   brand: string;
@@ -30,7 +31,7 @@ export class DealerComponent {
   ngOnInit(): void {
     this.isLoading = true;
     this.http
-      .get<Dealer[]>('http://localhost:3000/dealers')
+      .get<Dealer[]>(`${environment.apiUrl}/dealers`)
       .subscribe((data: Dealer[]) => {
         this.collectionSize = data.length;
         this.dealers = data;

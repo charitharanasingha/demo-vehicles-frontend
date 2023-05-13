@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
+
 
 interface Vehicle {
   bac: string;
@@ -44,7 +46,7 @@ export class VehicleComponent {
 
     this.http
       .get<Vehicle[]>(
-        `http://localhost:3000/vehicles/${this.bac}`
+        `${environment.apiUrl}/vehicles/${this.bac}`
       )
       .subscribe((data: Vehicle[]) => {
         this.collectionSize = data.length;
