@@ -16,7 +16,7 @@ phases:
   build:
     commands:
         - echo Build started 
-        - ng build --configuration --production
+        - ng build
         - ls -l -lf
   post_build:
      commands:
