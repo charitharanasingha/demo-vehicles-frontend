@@ -26,6 +26,9 @@ phases:
         - echo Build completed on `date`
 artifacts:
     files:
-        - '**/*'
+        - '/'
     discard-paths: yes
     base-directory: 'dist*'
+cache:
+paths:
+    - node_modules/
