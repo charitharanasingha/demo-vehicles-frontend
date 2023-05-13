@@ -28,4 +28,4 @@ artifacts:
     files:
         - '**/*'
     discard-paths: yes
-    base-directory: 'dist*'
+    base-directory: '**/dist/demo-vehicles-frontend'
