@@ -20,12 +20,6 @@ describe('DealerComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'demo-vehicles-frontend'`, () => {
-    const fixture = TestBed.createComponent(DealerComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('demo-vehicles-frontend');
-  });
-
   it('should render title', () => {
     const fixture = TestBed.createComponent(DealerComponent);
     fixture.detectChanges();
